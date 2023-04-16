@@ -123,3 +123,46 @@ body {
   border-right: 150px solid transparent;
   right: calc(50% - 250px);
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  width: 50%;
+  z-index: 1;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Responsive layout - makes the form stack on top of each other */
+@media (max-width: 600px) {
+  form {
+    width: 80%;
+  }
+  input[type="text"],
+  input[type="submit"] {
+    width: 100%;
+  }
+}

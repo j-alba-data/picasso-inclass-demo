@@ -23,6 +23,28 @@
       <div class="lower-box"></div>
       <div class="triangle triangle-big"></div>
       <div class="triangle triangle-small"></div>
+
+      <form id="myForm" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" />
+        <input type="submit" value="Submit" />
+      </form>
+
+      <script>
+        document
+          .getElementById("myForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = "formsubmitted.html";
+
+            setTimeout(function () {
+              alert("Your response has been recorded.");
+            }, 1000);
+          });
+      </script>
+
       <img
         id="figure-1"
         src="./picasso-black-figures.png"
