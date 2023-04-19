@@ -17,6 +17,31 @@ body {
   background-color: #00989d;
 }
 
+.text {
+  font-size: 48px;
+  font-weight: bold;
+  color: limegreen;
+  text-align: center;
+  z-index: 1;
+  letter-spacing: 5px;
+}
+
+.text span:nth-child(1),
+.text span:nth-child(4),
+.text span:nth-child(7) {
+  color: limegreen;
+}
+
+.text span:nth-child(2),
+.text span:nth-child(5) {
+  color: darkgreen;
+}
+
+.text span:nth-child(3),
+.text span:nth-child(6) {
+  color: lightgreen;
+}
+
 .upper-box div {
   flex-grow: 1;
   display: flex;
