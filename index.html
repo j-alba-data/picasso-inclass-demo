@@ -25,13 +25,26 @@
       <div class="triangle triangle-big"></div>
       <div class="triangle triangle-small"></div>
 
-      <form action="formsubmitted.html">
+      <form id="myForm" action="formsubmitted.html">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" />
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" />
         <input type="submit" value="Submit" />
       </form>
+   
+      <script>
+        document
+          .getElementById("myForm")
+          .addEventListener("submit", function (event) {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            if (name === "" || email === "") {
+              alert("Please fill out both fields before clicking submit.");
+              event.preventDefault();
+            }
+          });
+      </script>
 
       <img
         id="figure-1"
